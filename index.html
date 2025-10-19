@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Ejercicio 02 - Arrays</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+  <h2>Ejercicio 02: Suma de todos los valores del array</h2>
+
+  <div id="array" class="resultado"></div>
+  <div id="resultado" class="resultado">Haz clic en "Ejecutar" para calcular la suma.</div>
+
+  <button class="btn" id="btnEjecutar">Ejecutar Ejercicio</button>
+
+  <footer>Ejercicio 02 · Arrays en JavaScript</footer>
+
+  <script>
+    
+    const numeros = [15, 8, 23, 42, 7, 99, 14, 33, 50, 61];
+
+   
+    let textoArray = "Elementos del array:\n";
+    for (let i = 0; i < numeros.length; i++) {
+      textoArray += `Índice ${i}: ${numeros[i]}\n`;
+    }
+    document.getElementById("array").innerText = textoArray;
+
+    
+    function ejecutar() {
+      let suma = 0;
+      for (let i = 0; i < numeros.length; i++) {
+        suma += numeros[i];
+      }
+      document.getElementById("resultado").innerText =
+        `La suma de todos los valores del array es: ${suma}`;
+    }
+
+   
+    document.getElementById("btnEjecutar").onclick = ejecutar;
+  </script>
+</div>
+</body>
+</html>
